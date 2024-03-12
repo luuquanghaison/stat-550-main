@@ -1,0 +1,201 @@
+---
+lecture: "Model selection and overfitting"
+format: revealjs
+metadata-files: 
+  - _metadata.yml
+output-file: html
+---
+
+{{< include _titleslide.qmd >}}
+
+
+## Structure
+
+<br>
+
+
+1. Model selection
+
+<br>
+
+
+2. Underfitting and overfitting
+
+<br>
+
+3. Validation set and cross-validation
+
+
+
+# Model selection {background-color="#86D4FE"}
+
+
+## Statistical model
+
+Represents assumptions about data generation process
+
+Often includes parameters to be estimated
+
+* Linear: $y = ax + b + \epsilon$
+
+* Logistic: $P(y=0) = \frac{1}{1+e^{ax+b}}$
+
+* `...`
+
+
+. . .
+
+The real world is too complicated
+
+. . .
+
+$\Rightarrow$ All models are wrong
+
+. . .
+
+$\Rightarrow$ Choose the best fitting one
+
+
+## 
+<center>
+
+![](gfx/curve_fitting.png){width="73%"}
+
+</center>
+
+
+## Model fit
+
+**Q**: How do you quantify "best" fit?
+
+<br>
+
+. . .
+
+**A**: By the [mean squared error]{.secondary} (MSE) between estimated and true value for new data
+
+For prediction
+$$\text{MSE} = E(\hat{y}-y)^2$$
+For inference
+$$\text{MSE} = E(\hat{\theta}-\theta)^2$$
+
+# Underfitting and Overfitting {background-color="#86D4FE"}
+
+## Bias-variance breakdown
+MSE can be broken down into
+
+<br>
+
+$$\begin{align}
+  \text{MSE} = \underbrace{Var(\hat{y})}_{\text{Variance}} + \underbrace{(E(\hat{y})-y)^2}_{\text{Bias}^2} + \underbrace{\sigma^2}_{\text{Noise}}
+\end{align}$$
+
+* [Bias]{.secondary}: error due to model not being able to capture the truth
+* [Variance]{.secondary}: error due to sensitivity to noise in data
+
+. . .
+
+Problem: Bias and variance terms depend on true value which is unknown at training time
+
+## Underfitting and overfitting
+
+Model complexity affects both bias and variance
+
+* [Underfitting]{.secondary}: 
+  - Model too simple to capture the underlying truth
+  - Estimate tends to have high bias, low variance
+
+* [Overfitting]{.secondary}: 
+  - Model too complex leading to noise sensitivity
+  - Estimate tends to have low bias, high variance
+  
+. . .
+  
+[Overfitting]{.secondary} is harder to detect and therefore more problematic
+
+## Bias-variance trade-off {.nostretch}
+<center>
+
+![](gfx/b_vs_v.png){width="90%" height=800}
+<center/>
+
+## Bias-variance trade-off (cont) {.nostretch}
+<center>
+
+![](gfx/right_model.png){width="90%" height=750}
+<center/>
+
+
+# Validation set & cross-validation {background-color="#86D4FE"}
+
+## Validation set
+
+A part of the data used to evaluate model performance before applying to new data
+
+<br>
+
+Procedure
+
+1. Randomly split the data into [train]{.secondary} set and [validation]{style="color:blue;"} set
+
+2. Fit model using [train]{.secondary} set
+
+3. Evaluate model fit using [validation]{style="color:blue;"} set
+
+4. Use the evaluation to inform hyperparameter choices
+
+5. Fit the final model on **both** sets using the model with best validation fit
+
+## Cross-validation
+
+Problem: a single validation set may not represent the data well
+
+. . .
+
+Solution: 
+
+* Do it again with a different split
+
+* Use average performance across splits as model fit
+
+. . .
+
+[K-fold]{.secondary}: use 1/k th of the data as validation each split
+
+[Leave one out]{.secondary}: use 1 data point as validation each split
+
+## Visualization
+
+<center>
+
+![](gfx/K_fold.png){width="85%"}
+
+<center/>
+
+
+## Takeaways
+
+<br>
+
+Models should balance between bias and variance for best fit
+
+<br>
+
+Validation set can help evaluate model performance
+
+<br>
+
+Cross-validation averages performance across different splits for better consistency
+
+## References
+<br>
+
+_Points of significance: model selection and overfitting_, Jake Lever, Martin Krzywinski, Naomi Altman (2016), Nature methods.
+
+<br>
+
+_An introduction to statistical learning_, Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani (2013), Springer
+
+<br>
+
+_The Elements of Statistical Learning_, Trevor Hastie, Robert Tibshirani, Jerome Friedman (2009), Springer

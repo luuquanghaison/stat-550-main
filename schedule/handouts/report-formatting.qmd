@@ -1,0 +1,81 @@
+---
+title: Formatting consulting reports
+---
+
+::: {.callout-note}
+This advice comes from [Prof. Harry Joe](https://www.stat.ubc.ca/users/harry-joe).
+:::
+
+
+
+## Client Report Format
+
+The itemized list given below should work for most reports. The report should be as short as possible with only relevant material; avoid digression and do not mention ideas that were considered but discarded.
+
+Perhaps start with an outline (bulleted list) of take-home messages (conclusions, statistical advice); then an outline or bulleted list of items needed to support the take-home messages. If the ordering of sections is as given below, write an outline for each section and then convert to paragraphs. This should help to avoid tangential sentences (material not needed to support the statistical advice).
+
+The format and most guidelines below are also good for term project reports, presentations, and research articles/reports.
+
+Reports for regular clients: 4 to 6 pages; an appendix of several additional pages (e.g. sample R code) could be added if relevant. 
+
+## Ordering of sections of report.
+
+### Suggested Outline
+
+1. Abstract or executive summary with the "big picture" (motivation) and the most important advice (results).
+1. Introduction. Clearly state the scientific objective(s) of the study.
+1. Data description and collection. Provide the important details on the nature of the data and how they were collected.
+Statistical issues or questions. State the statistical questions the client wants answered (or should want to have answered).
+1. Proposed statistical methods and results. 
+    a. Descriptive tools: Suggest appropriate tables and figures for summarizing the data; include example figures relevant to the project (use simulated data if you have to)
+    b. Analytical techniques: Avoid using formulas to the maximal extent possible (supply relevant references instead); explain ideas along with an example and perhaps sample output relevant to the project
+    c. Any statistically significant result should be supported with appropriate graphs or tables.
+1. Conclusion. Summarize your recommendations.
+1. Further reading. Include references that you know are at the level your client will understand.
+1. Appendix. If the client wants formulas and computer code, this is the best place to put it
+
+
+### Additional advice
+
+* Don't put lengthy computer code or output in the body of your report. If you want to provide some details on how to carry out the analysis you are recommending, put this in the appendix. Ideally, this would be in the software the client plans to use.
+* Don't refer the client to references for explanations or examples without having given your own.
+* Do communicate clearly. Avoiding formulas and using relevant examples and figures to back up your explanations are probably the best way to ensure your client will understand your advice.
+* Do not use too many digits in your report. Typically numerical output of statistical software requires truncation of the number of decimal places.
+* The captions of graphs and tables should be self-contained enough so that the meaning is clear without reading the body of the report.
+* Units of all variables should be included in summaries etc.
+
+
+## Suggestions for Consulting Reports for Non-Statisticians
+
+
+### Overall style
+
+* Report should be written to your client, so must use language your client can understand. Use plain English and avoid statistical technical terms, such as "generalized linear model" (better would be binary regression or count regression or ordinal regression depending on the response type) and "hierarchical model".
+* Report should focus on motivation, explanation and interpretation. Your client needs to understand (conceptually) the nature of the analyses you are suggesting/presenting, and it is most important to convey clearly what interpretations are possible based on your suggested analyses.
+* Sections should be organized to discuss simpler approaches first and more complicated approaches later, using the discussion of the simpler approaches to build up to the more complicated approaches. For example, for regression, could start with one predictor before multiple predictors.
+* Report should not include verbatim copy of computer output (for example, R markdown is inappropriate except possibly in the appendix).
+* Report should include only essential tables and figures (not everything that you produced from your code). Include only what is needed to support the advice/conclusions.
+* Never say that an assumption or hypothesis has been verified. You can say that an assumption of statistical procedure can be assessed with some graphical method.
+* If assumptions about a statistical procedure are included, be precise in stating them without using notation. For example, for the paired-t procedure, saying "the data are assumed to be normally distributed" is imprecise; the precise assumption is that "differences of .. and .. are assumed to be normally distributed"
+
+### Analysis Strategies
+
+* Always carry out detailed exploratory analyses before any formal analyses.
+* Avoid over-reliance on hypothesis testing; estimation via confidence intervals or out-of-sample assessment of prediction ability are much more informative.
+* Be careful with pseudo-replication.
+* For statistical methodology, it is better to understand methods based on statistical theory from your previous courses. Avoid use of a search engine for a methodology to solve a problem. It is not acceptable to only provide R (or SAS/python) functions/code as advice for a client. Anything software must be backed up with brief explanations of the methodology in non-technical language. Because there are errors and unclear documentation in many R functions (including non-standard uses of `lm()`, `glm()`, `anova()` etc), when you are using an R function for the first time, please verify most of the output via direct coding of a few lines of R code. Note that output of maximum likelihood estimation can be verified via `nlm()` (nonlinear minimization function), with input of the negative log-likelihood.
+* For reference of statistical methodology to a client, provide a book reference rather than a web site.
+* If you plan to continue to do research in MSc or PhD program, you will be better prepared if you come up with your own ideas for statistical methods for different data situations and write your own code. That is, if you can develop and code existing methods on your own, this is a step to developing and coding new methods in original statistical research.
+
+### Interpretation of Results
+
+* Be very careful when discussing statistical inference based on observational data, when there is no randomization or sampling basis for carrying out the inference. To what population does the inference apply? Keep in mind that your inference is entirely model-based in such situations.
+* Your summary section should include a frank and careful discussion of any concerns you may have about your recommended approaches to the client's problem.
+
+
+### Proofreading and notation
+
+* General: Proofread your report very carefully for clarity of wording, optimal organization, and grammatical errors before you submit it for review. Use a spellchecker to check for spelling errors.
+* Avoid abbreviations in text. If an abbreviation is needed, show the full term before the first occurrence of the abbreviation.
+* In this course, the word 'data' should be considered as plural for grammatical considerations. (The singular form in Latin is 'datum').
+* If necessary, information will be posted on correct use of mathematical notation without overloading symbols and abusing notation for functions and random variables.

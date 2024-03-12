@@ -1,0 +1,16 @@
+{
+  "hash": "ba6514ef2cba334619211cfab2de72d2",
+  "result": {
+    "markdown": "---\ntitle: \"<i class='bi bi-calendar3'></i> Lecture slides and handouts\"\n---\n\n\n\n::: .callout-note\nTerm 2 runs 8 January to 13 April. \n:::\n\n::: {.callout-warning}\nSchedule is on Canvas. All dates subject to change.\n:::\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n:::\n\n\n\n## Lecture slides\n\n* [Giving presentations](slides/presentations.qmd)\n* [Git and GitHub](slides/git.qmd)\n* [Tips for organization](slides/organization.qmd)\n* [Unit tests](slides/unit-tests.qmd)\n* [Bootstrap](slides/bootstrap.qmd)\n* [Time series](slides/time-series.qmd)\n* [Cluster computing](slides/cluster-computing.qmd)\n* [Skills for graduate students](slides/grad-school.qmd)\n\n## Handouts\n\n* [Recommended books and sources](handouts/reference-books.qmd)\n* [Formatting consulting reports](handouts/report-formatting.qmd)\n\n\n<!--\n\n\n## Guest lecturers\n\n-->\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

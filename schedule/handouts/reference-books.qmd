@@ -1,0 +1,58 @@
+---
+title: Recommended books
+---
+
+::: .callout-note
+These are [Prof. Harry Joe's](https://www.stat.ubc.ca/users/harry-joe) suggestions for resources on different statistical topics that students might not be exposed to before Stat 550/551.
+:::
+
+
+The student can also learn about the topic and not just about how an R function works. 
+
+Books with R in the title are generally not good for learning the theory. 
+
+A book reference with theory and good examples is better than a URL.
+
+
+<hr>
+
+ANOVA for different experimental designs (includes random effects, unbalanced). 
+: _Statistical Analysis of Designed Experiments_, A C. Tamhane (2009), Wiley.
+
+Logistic regression and diagnostics. 
+: _Applied Logistic Regression_, 2nd ed, Hosmer and Lemeshow (2000), Wiley.
+
+Survival or time-to-event data. 
+: _Statistical Models and Methods for Lifetime Data_, 2nd ed, J.F. Lawless (2003), Wiley.
+
+Time series including multivariate. 
+: _Time Series Analysis, Univariate and multivariate methods_, 2nd ed., W.W.S. Wei (1990), Addison.
+
+Factor models as part of multivariate statistics. 
+: _Applied Multivariate Statistical Analysis_, 5th ed, Johnson and Wichern (2002), Prentice Hall (not e-available).
+
+SEM = Structural equation models. 
+: _Linear Causal Modeling with Structural Equations_, S.A. Mulaik (2009), Chapman&Hall/CRC.
+
+Meta-analysis. 
+: _Meta-Analysis of Controlled Clinical Trials_, A. Whitehead (2002), Wiley.
+
+Numerical maximum likelihood. 
+: _Nonlinear Parameter Optimization Using R Tools_, J.C. Nash (2014), Wiley.
+
+Item response, validity and reliability of instruments for abstract attributes. 
+: _Test Theory: A Unified Treatment_, R.D. McDonald (1999), Routledge.
+
+Sample size calculation. e.g. non-central t, non-central F etc.,. and general approach. 
+: _Statistical power analysis : a simple and general model for traditional and modern hypothesis tests_, 4th edition. Kevin R. Murphy, Brett Myors, Allen Wolach (2014), Routledge.
+: 
+: This book covers many cases. However the principle of sample size calculation can be shown better in a few pages based on examples that show the derivation of the distribution of the test statistic under a point null hypothesis and under a point alternative hypothesis.
+
+Survey sampling
+: _Sampling Design and Analysis_, Second Edition. Sharon L. Lohr, CRC 2019. 
+: Especially Chapter 8 Nonresponse; Section 8.3 Callbacks and Two-Phase Sampling.
+: 
+: [_TRC Market Research, Non-Response Bias In Survey Sampling._](https://www.greenbook.org/marketing-research/non-response-bias)
+
+Machine learning procedures
+: [_Elements of Statistical Learning_](https://hastie.su.domains/ElemStatLearn/), 2nd edition. Hastie, Tibshirani, and Friedman (2009), Springer.

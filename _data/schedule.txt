@@ -1,0 +1,14 @@
+ Date | Topic | Deadline |
+ 2 March | Syllabus, version control, HW1  | HW1 out |
+ 7 March | Giving talks, HW1 discussion, prep for client | |
+ 9 March | Client presentation | |
+ 14 March | Presentations  | HW1v1 Due |
+ 16 March | Presentations  |  |
+ 21 March | Organization  |  |
+ 23 March | Writing code   | HW2 Out   |
+ 28 March | Unit testing  | HW1v1.1 Due |
+ 30 March | Advanced regression modelling |  |
+ 4 April | Additional client meeting, overflow | Pv1 Due |
+ 6 April | Regularization and model selection | Pv1.1 Due  |
+ 11 April | How to read | HW1v2 Due, HW2 Due |
+ 13 April | Parallel computing | Pv2 Due |

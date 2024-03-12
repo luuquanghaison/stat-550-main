@@ -1,0 +1,69 @@
+---
+title: "<i class='bi bi-easel2-fill'></i> Presentations"
+---
+
+## Possible topics
+
+### Data (prepared by 8 March)
+
+1.  Continuous vs discrete: DG Altman and P Royston (2006) The cost of dichotomising continuous variables. BMJ 332, p. 1080
+2.  Transformations: JM Bland and DG Altman (1996) The use of transformations when comparing two means. BMJ 312, p. 1153
+3.  Likert scale: Carifio J, Perla R. Resolving the 50‐year debate around using and misusing Likert scales. Medical education. 2008, 42(12):1150-2.
+4.  Missing data and Imputation: Horton NJ, Lipsitz SR. Multiple imputation in practice: comparison of software packages for regression models with missing variables. The American Statistician. 2001, 55(3):244-54. DG Altman and JM Bland (2007) Missing data. BMJ 334, p. 424
+
+### Modelling (prepared by 15 March)
+
+5.  Experimental designs: Czitrom V. One-factor-at-a-time versus designed experiments. The American Statistician. 1999, 53(2):126-31.
+6.  Association, correlation and causation: Altman N, Krzywinski M. Points of Significance: Association, correlation and causation (2015).
+7.  Model Diagnostics: Friendly M, Kwan E. Where's Waldo? Visualizing collinearity diagnostics. The American Statistician. 2009, 63(1):56-65.
+8.  Overfitting: Lever J, Krzywinski M, Altman N. Points of significance: model selection and overfitting.
+
+### Inference (prepared by 22 March)
+
+9.  P-values: http://www.nature.com/news/statisticians-issue-warning-over-misuse-of-p-values-1.19503?WT.mc_id=SFB_NNEWS_1508_RHBox; DG Altman and JM Bland (1995) Absence of evidence is not evidence of absence. BMJ 311,p. 485
+10. P-val adjustment: JM Bland and DG Altman (1995) Multiple signicance tests: the Bonferroni method. BMJ 310, p. 170; O'Keefe DJ. Colloquy: Should familywise alpha be adjusted? Against familywise alpha adjustment. Human Communication Research. 2003, 29(3):431-47.
+11. Power: Krzywinski M, Altman N. Points of significance: Power and sample size.
+12. Uncertainty, SD and SE: Krzywinski M, Altman N. Points of significance: importance of being uncertain. DG Altman and JM Bland (2005) Standard deviations and standard errors. BMJ 331, p. 903; Krzywinski M, Altman N. Points of significance: error bars.
+
+### Challenges in data analysis and consulting (prepared by 29 March)
+
+13. Pseudoreplications: Schank JC, Koehnle TJ (2009). Pseudoreplication is a pseudoproblem. Journal of Comparative Psychology 123(4):421--433; Blainey P, Krzywinski M, Altman N. Points of significance: replication.
+14. Simpson's paradox: Clifford H. Wagner (February 1982). "Simpson's Paradox in Real Life". The American Statistician. 36 (1): 46--48.; Berman, S. DalleMule, L. Greene, M., Lucker, J. (2012), "Simpson's Paradox: A Cautionary Tale in Advanced Analytics", Significance.
+15. Outliers: Altman N, Krzywinski M. Points of Significance: Analyzing outliers: influential or nuisance?
+16. Consulting - part I: Zahn DA, Isenberg DJ. Nonstatistical aspects of statistical consulting. The American Statistician. 1983, 37(4a):297-302.
+17. Consulting - part II: Kirk RE. Statistical consulting in a university: Dealing with people and other challenges. The American Statistician. 1991, 45(1):28-34.
+
+## Procedure
+
+1.  On the shared Google Sheet. Put a number (in the column with your name) indicating your Top 3 choices. You must do this by 28 January at noon. If you don't, you'll be assigned whatever is left.
+2.  I'll make final assignments by 31 January.
+3.  Be ready to present by the listed date for your assignment. Your presentation may happen a few days later, but you must be ready on the listed date.
+
+## Expectations
+
+Time: 15 min followed by 5-10 minute of Q&A.
+
+-   Expect some immediate feedback/criticism from me. Try not to take this too hard. The intention is to help everyone improve.
+
+-   You can use any software to prepare your oral presentation. Topics are simple but useful in consulting. The first \~10 minutes should be targeted toward a general audience. The remaining \~5 minutes should be more technical, targeted toward your classmates.
+
+-   The references above are meant to be good starting points. You can follow them if you like, but this is not required. You can begin with the papers given, but you must complement them with other references.
+
+#### Rubric
+
+You'll be evaluated on
+
+- content (7), 
+- presentation skills (3), 
+- clarity of the slides (4), 
+- and time management (1).
+
+#### Deliverable
+
+-   No matter how you create your presentation (.Rmd, Google slides, .pptx, .keynote), you must upload the slides (and only the slides) to the `presentations` repo no later than **3** days before the "projected presentation date".
+-   You should do this via pull request.
+-   The name of your file should be `xx-topic-title` where `xx` is the two digit number of your presentation, `topic` is self-explanatory, and `title` is the first word in the title.
+-   For example, `06-modelling-association.pdf` for presentation 6.\
+-   I'll allow .html, .pdf, or a link to something public (say with `06-modelling-association.md` containing only a link). No .pptx or .keynote.
+
+You must have a slide (toward the back, not necessarily shown during the presentation) with a list of useful references. These must be properly formatted using a standard style. I suggest following *Annals of Applied Statistics* (see [here](https://imstat.org/journals-and-publications/annals-of-applied-statistics/annals-of-applied-statistics-next-issues/) for examples) or *Canadian Journal of Statistics*. You will not receive full marks if the only references are those listed above.

@@ -1,0 +1,51 @@
+---
+title: "<i class='bi bi-calendar3'></i> Lecture slides and handouts"
+---
+
+
+::: .callout-note
+Term 2 runs 8 January to 13 April. 
+:::
+
+::: {.callout-warning}
+Schedule is on Canvas. All dates subject to change.
+:::
+
+```{r load-sched}
+#| echo: FALSE
+#| eval: FALSE
+library(tibble)
+tib <- readr::read_delim("_data/schedule.txt", "|", trim_ws = TRUE, na = "NA")
+tib <- tib[ ,1:3]
+```
+
+```{r sched}
+#| echo: FALSE
+#| eval: FALSE
+knitr::kable(tib)
+```
+
+
+## Lecture slides
+
+* [Giving presentations](slides/presentations.qmd)
+* [Git and GitHub](slides/git.qmd)
+* [Tips for organization](slides/organization.qmd)
+* [Unit tests](slides/unit-tests.qmd)
+* [Bootstrap](slides/bootstrap.qmd)
+* [Time series](slides/time-series.qmd)
+* [Cluster computing](slides/cluster-computing.qmd)
+* [Skills for graduate students](slides/grad-school.qmd)
+
+## Handouts
+
+* [Recommended books and sources](handouts/reference-books.qmd)
+* [Formatting consulting reports](handouts/report-formatting.qmd)
+
+
+<!--
+
+
+## Guest lecturers
+
+-->

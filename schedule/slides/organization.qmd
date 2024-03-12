@@ -1,0 +1,225 @@
+---
+lecture: "Organization and reports"
+format: revealjs
+metadata-files: 
+  - _metadata.yml
+---
+
+{{< include _titleslide.qmd >}}
+
+
+## Topics for today
+
+1. Organizing your file system
+2. Writing reports that mix output and text
+3. (Avoiding buggy code)
+
+## The guiding theme
+
+![](https://imgs.xkcd.com/comics/is_it_worth_the_time.png){.center}
+
+
+# Organization {background-color="#e98a15"}
+
+* Students come to my office
+* All their stuff is on their Desktop
+* This is 🤮
+
+## I urge you to consult:
+
+[Karl Broman's Notes](https://kbroman.org/Tools4RR/assets/lectures/06_org_eda_withnotes.pdf)
+
+
+## Some guiding principles
+
+1. Avoid naming by date. 
+    - Your file system already knows the date.
+    - Sometimes projects take a while.
+    - You can add this inside a particular report: `Last updated: 2022-01-07`
+1. If you're going to use a date anywhere, do `YYYY-MM-DD` or `YYYYMMDD` not `DD-MMM-YY`
+1. This is a process
+1. Don't get tied down
+1. But don't reorganize every time you find a better system
+1. Customize to your needs, preferences
+ 
+
+## Organizing your stuff
+
+
+```{.bash}
+├── Advising
+│   ├── arash
+│   ├── gian-carlo
+├── CV
+├── Computing
+│   ├── batchtools.slurm.tmpl
+│   ├── computecanada_notes.md
+│   ├── FKF
+│   └── ghclass
+├── Grants
+│   ├── B&E JSM 2010
+│   ├── CANSSI RRP 2020
+│   ├── NSERC 2020
+├── LettersofRec
+├── Manuscripts
+|   ├── learning-white-matter
+|   ├── rt-est
+│   ├── zzzz Old
+├── Referee reports
+├── Talks
+│   ├── JobTalk2020
+│   ├── ubc-stat-covid-talk
+│   └── utoronto-grad-advice
+├── Teaching
+│   ├── stat-406
+│   ├── stat-550
+│   ├── zzzz CMU TA
+│   └── zzzz booth
+└── Website
+```
+
+
+
+## Inside a project
+
+```{.bash}
+.
+├── README.md
+├── Summary of Goals.rtf
+├── cluster_output
+├── code
+├── data
+├── dsges-github.Rproj
+├── manuscript
+└── waldman-triage
+```
+
+* Include a README
+* Ideally have a MAKEFILE
+* Under version control, shared with collaborator
+
+
+## Basic principles
+
+* Be consistent
+    – directory structure; names
+    - all project files in 1 directory, not multiples
+* Always separate raw from processed data
+* Always separate code from data
+* It should be obvious what code created what files, and what the dependencies are. (MAKEFILE forces this)
+* [No hand-editing of data files]{.secondary}
+* Don’t use spaces in file names
+* In code, use relative paths, not absolute paths
+  - `../blah` not `~/blah` or `/users/dajmcdon/Documents/Work/proj-1/blah`
+  - The `{here}` package in `R` is great for this
+  
+## Problem: Coordinating with collaborators
+
+* Where to put data that multiple people will work with?
+* Where to put intermediate/processed data?
+* Where to indicate the code that created those processed data files?
+* How to divvy up tasks and know who did what?
+* Need to agree on directory structure and file naming conventions
+
+[GitHub is (I think) the ideal solution, but not always feasible.]{.secondary}
+
+## Problem: Collaborators who don’t use GitHub
+
+* Use GitHub yourself
+* Copy files to/from some shared space
+    - Ideally, in an automated way (Dropbox, S3 Bucket)
+    - Avoid Word at all costs. Google Docs if needed.
+    - Word and Git do not mix
+    - [Last resort:]{.secondary} Word file in Dropbox. Everything else nicely organized on your end. Rmd file with similar structure to Manuscript that does the analysis.
+* Commit their changes.
+
+. . .
+
+Overleaf has Git built in (paid tier). I don't like Overleaf. Costs money, the viewer is crap and so is the editor. I suggest you avoid it.
+
+# Reports that mix output and text {background-color="#e98a15"}
+
+## Using Rmarkdown/Quarto/Jupyter for most things
+
+### Your goal is to [Avoid at all costs]{.secondary}:
+
+* "How did I create this plot?"
+* "Why did I decide to omit those six samples?"
+* "Where (on the web) did I find these data?"
+* "What was that interesting gene/feature/predictor?"
+
+<hr>
+ 
+Really useful resource:
+
+* Emily Reiderer [RmdDD](https://emilyriederer.netlify.app/post/rmarkdown-driven-development/)
+* Talk [Slides](https://www.slideshare.net/EmilyRiederer/rmarkdown-driven-development-rstudioconf-2020)
+
+## When I begin a new project
+
+1. Create a directory structure
+    - `code/`
+    - `papers/`
+    - `notes/` (maybe?)
+    - `README.md`
+    - `data/` (maybe?)
+1. Write scripts in the `code/` directory
+1. TODO items in the README
+1. Use Rmarkdown/Quarto/Jupyter for reports, render to `.pdf`
+
+## As the project progresses...
+
+Reorganize
+
+* Some script files go to a package (thorougly tested), all that remains is for the paper
+* These now load the package and run simulations or analyses (that take a while)
+* Maybe add a directory that contains dead-ends (code or text or ...)
+* Add `manuscript/`. I try to go for `main.tex` and `Supplement.Rmd`
+* `Supplement.Rmd` runs anything necessary in `code/` and creates all figures in the main doc and the supplement. Also generates any online supplementary material
+* Sometimes, just `manuscript/main.Rmd` 
+* Sometimes `main.tex` just inputs `intro.tex`, `methods.tex`, etc.
+
+## The old manuscript (starting in School, persisting too long)
+
+1. Write lots of LaTeX, `R` code in separate files
+1. Need a figure. Run `R` code, get figure, save as `.pdf`.
+1. Recompile LaTeX. Axes are unreadable. Back to `R`, rerun `R` code, ...
+1. Recompile LaTeX. Can't distinguish lines. Back to `R`, rerun `R` code, ...
+1. Collaborator wants changes to the simulation. Edit the code. Rerun figure script, doesn't work. More edits....Finally Recompile.
+1. Reviewer "what if `n` is bigger". Hope I can find the right location. But the code isn't functions. Something breaks ...
+1. Etc, etc.
+
+## Now: 
+
+
+1. `R` package with documented code, available on GitHub.  
+1. One script to run the analysis, one to gather the results.  
+1. One `.Rmd` file to take in the results, do preprocessing, generate all figures.  
+1. LaTeX file on Journal style.
+
+### The optimal
+
+Same as above but with a MAKEFILE to automatically run parts of 1--4 as needed
+
+
+
+
+## Evolution of presentations
+
+1. LaTeX + Beamer (similar to the manuscript):
+    a. Write lots of LaTeX, `R` code in separate files
+    a. Need a figure. Run `R` code, get figure, save as `.pdf`.
+    a. Rinse and repeat.
+1. Course slides in Rmarkdown + Slidy
+1. Seminars in Rmarkdown + Beamer (with lots of customization)
+1. Seminars in Rmarkdown + Xaringan
+1. Everything in Quarto
+
+::: {.callout-tip appearance="simple"}
+* Easy to use.
+* Easy to customize (defaults are not great)
+* WELL DOCUMENTED
+:::
+
+
+## Takeaways

@@ -1,0 +1,73 @@
+---
+lecture: "Skills for graduate students"
+format: revealjs
+metadata-files: 
+  - _metadata.yml
+---
+
+{{< include _titleslide.qmd >}}
+
+## Something happens in graduate school
+
+* As undergrads, you took lots of classes
+* You didn't care that much about all of them
+* Sure, you wanted good grades, but you may not have always wanted to [really learn]{.tertiary} the material
+* And you probably didn't try to go in depth beyond the requirements
+
+. . .
+
+* That has to change in grad school
+* Even if you don't want a to be a professor, to get a PhD, to do an MSc thesis.
+* This is the material that you have decided you will use for the rest of your life
+
+. . .
+
+* If you disagree, then we should talk
+
+
+## Side discussion on "Reading for research"
+
+
+* You should "read" regularly: set aside an 2-3 hours every week
+* Stay up-to-date on recent research, determine what you find interesting
+* What do people care about? What does it take to write journal articles?
+
+
+## What is "read"?
+
+* Start with titles, then abstracts, then intro+conclusion
+* Each is a filter to determine how far to go
+* Pass 3 filters, [read]{.secondary} the paper (should take about ~30 minutes)
+* Don't get bogged down in notation, proofs
+* Organize your documents somehow, make notes in the margins, etc
+* After you [read]{.secondary} it, you should be able to tell me what they show, why it's important, why it's novel
+* If you can, figure out [how]{.tertiary} they show something. This is hard.
+
+
+## How to find and organize papers
+
+* arXiv, AOS, JASA, JCGS have RSS feeds, email lists etc
+* Find a statistician you like who filters
+* Follow reading groups
+* Conference proceedings
+* Become an IMS member, SSC member (ASA costs money:( )
+* BibDesk, Zotero
+
+## Ideal outcome
+
+* If you need to learn something, you can teach yourself
+* Know how to find the basics on the internet
+* Know how to go in depth with real sources
+* Collect a set of resources that you can turn to regularly
+* If you need to read a book, you can
+* If you need to pick up a new coding language, you can
+
+. . .
+
+::: {.callout-note}
+## What this doesn't mean
+
+You are not expected to have all the answers at the tips of your fingers.
+:::
+
+But you should get progressively good at finding them.
